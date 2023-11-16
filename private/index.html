@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Start Page</title>
+    <!-- Add your CSS links here -->
+</head>
+<body>
+    <header>
+       This is the awesome title of the game
+    </header>
+    <button id="playButton">Play</button>
+    <script>
+        // when the play button is clicked, set playClick to true and redirect to game.html
+        document.getElementById('playButton').addEventListener('click', function() {
+            fetch('/setplay', { method: 'POST' })
+            .then(() => {
+                window.location.href = '/game.html';
+            });
+        });
+    </script>
+    <!-- Add your main body content here -->
+</body>
+</html>

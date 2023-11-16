@@ -10,6 +10,7 @@
   <body>
     <p>This is the title of the game</p>
     <script src="socket.io/socket.io.js"></script>
+    //new script non Unity
     <script>
        const socket = io();
     </script>
@@ -100,8 +101,13 @@
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.width = window.innerWidth + "px";
+        canvas.style.height = window.innerHeight + "px";
+       
+        window.addEventListener('resize', function() {
+             canvas.style.width = window.innerWidth + "px";
+             canvas.style.height = window.innerHeight + "px";
+            });
       }
 
       loadingBar.style.display = "block";
