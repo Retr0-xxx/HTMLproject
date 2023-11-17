@@ -9,10 +9,12 @@
   </head>
   <body>
     <p>This is the title of the game</p>
-    <script src="socket.io/socket.io.js"></script>
     //new script non Unity
     <script>
-       const socket = io();
+       function printSmth(){
+        console.log("Hello World");
+       }
+       printSmth();
     </script>
 
     <div id="unity-container" class="unity-desktop">
@@ -64,11 +66,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/test.loader.js";
+      var loaderUrl = buildUrl + "/MyWebGameBuild2.loader.js";
       var config = {
-        dataUrl: buildUrl + "/test.data.unityweb",
-        frameworkUrl: buildUrl + "/test.framework.js.unityweb",
-        codeUrl: buildUrl + "/test.wasm.unityweb",
+        dataUrl: buildUrl + "/MyWebGameBuild2.data.unityweb",
+        frameworkUrl: buildUrl + "/MyWebGameBuild2.framework.js.unityweb",
+        codeUrl: buildUrl + "/MyWebGameBuild2.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "MyWebGame",
